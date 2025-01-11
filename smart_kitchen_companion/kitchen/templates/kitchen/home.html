@@ -1,0 +1,26 @@
+{% extends 'kitchen/base.html' %}
+
+{% block content %}
+<div class="home-container">
+    <div class="main-content">
+        <h2>Welcome to Smart Kitchen Companion</h2>
+        <p>Your AI-powered kitchen assistant for minimizing food waste and optimizing meal planning.</p>
+        <ul>
+            <li>Generate personalized meal plans</li>
+            <li>Create recipes from leftover ingredients</li>
+            <li>Optimize your grocery shopping</li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        {% if user.is_authenticated %}
+            {% include 'kitchen/partials/inventory_list.html' %}
+        {% else %}
+            <div class="login-box">
+                <h3>Login to Manage Your Inventory</h3>
+                <a href="{% url 'login' %}" class="btn">Login</a>
+                <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

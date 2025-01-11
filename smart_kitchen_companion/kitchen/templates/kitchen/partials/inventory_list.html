@@ -1,0 +1,26 @@
+<div class="inventory-box">
+    <h3>Your Inventory</h3>
+    {% if items %}
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Expires</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.expiry_date }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Your inventory is empty.</p>
+    {% endif %}
+    <a href="{% url 'inventory' %}" class="btn">Manage Inventory</a>
+</div>

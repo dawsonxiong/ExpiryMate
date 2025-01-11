@@ -1,0 +1,16 @@
+{% extends 'kitchen/base.html' %}
+
+{% block content %}
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Login</button>
+    </form>
+
+    <div class="create-account-section">
+        <h3>Don't have an account?</h3>
+        <p>Create one now to start managing your kitchen inventory!</p>
+        <a href="{% url 'register' %}" class="btn btn-secondary">Create Account</a>
+    </div>
+{% endblock %}
