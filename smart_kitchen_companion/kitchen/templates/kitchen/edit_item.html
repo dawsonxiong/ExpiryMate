@@ -1,0 +1,11 @@
+{% extends 'kitchen/base.html' %}
+
+{% block content %}
+    <h2>Edit Food Item</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Save Changes</button>
+    </form>
+    <a href="{% url 'inventory' %}" class="btn btn-secondary">Cancel</a>
+{% endblock %}

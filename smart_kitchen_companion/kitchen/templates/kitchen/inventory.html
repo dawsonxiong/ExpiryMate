@@ -5,12 +5,12 @@
     {% if items %}
         <table class="inventory-table">
             <thead>
-                <tr>
-                    <th>Item Name</th>
-                    <th>Quantity</th>
-                    <th>Expiry Date</th>
-                    <th>Action</th>
-                </tr>
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
+                <th>Actions</th>
+            </tr>
             </thead>
             <tbody>
             {% for item in items %}
@@ -19,7 +19,8 @@
                     <td>{{ item.quantity }}</td>
                     <td>{{ item.expiry_date }}</td>
                     <td>
-                        <form method="post" action="{% url 'remove_item' item.id %}">
+                        <a href="{% url 'edit_item' item.id %}" class="btn btn-secondary">Edit</a>
+                        <form method="post" action="{% url 'remove_item' item.id %}" style="display: inline;">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-danger">Remove</button>
                         </form>

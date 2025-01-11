@@ -1,0 +1,32 @@
+{% extends 'kitchen/base.html' %}
+
+{% block content %}
+<h2>Recipe Suggestions</h2>
+
+<div class="recipe-container">
+    <div class="recipe-list">
+        <h3>Suggested Recipes</h3>
+        {% if recipes %}
+            <ul>
+            {% for recipe in recipes %}
+                <li>
+                    <h4>{{ recipe.name }}</h4>
+                    <p>Ingredients: {{ recipe.ingredients|join:", " }}</p>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No recipes found based on your inventory. Try adding more items!</p>
+        {% endif %}
+    </div>
+
+    <div class="inventory-sidebar">
+        <h3>Your Inventory</h3>
+        <ul>
+        {% for item in inventory_items %}
+            <li>{{ item.name }} ({{ item.quantity }})</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
