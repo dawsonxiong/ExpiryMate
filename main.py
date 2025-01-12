@@ -19,11 +19,6 @@ def filter_receipt(path):
     return res.message.content[0].text
 print(filter_receipt('test/receipt_1.jpeg'))
 
-def filter_image(path):
-    return
-    # return model(path)
-    # should return the foods that are in the image
-
 # Determine expiry date of food items
 def expiry(is_receipt, img):
     if is_receipt:
@@ -46,6 +41,7 @@ def expiry(is_receipt, img):
     return res.message.content[0].text
 print(expiry(True, 'test/receipt_1.jpeg'))
 
+# Obtain recipe for foods
 def recipe(txt):
     res = co.chat(
         model="command-r-plus-08-2024",
