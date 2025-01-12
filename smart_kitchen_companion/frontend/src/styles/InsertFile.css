@@ -1,0 +1,33 @@
+.insert-file-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f8f4e3;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.insert-file-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.insert-file-form label {
+  margin-bottom: 5px;
+}
+
+.insert-file-form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.insert-file-form button:hover {
+  background-color: #45a049;
+}

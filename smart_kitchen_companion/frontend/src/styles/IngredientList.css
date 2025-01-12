@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.ingredient-list-container {
+  position: fixed;
+  right: 1%;
+  top: 10%;
+  width: 25%;
+  height: 80%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #f8f4e3;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.ingredient-list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ingredient-item:hover .actions {
+  display: block;
+}
+
+.actions {
+  display: none;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.add-form {
+  margin-top: 20px;
+}
+
+.add-form input {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.add-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #22543d;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.add-form button:hover {
+  background-color: #34805d;
+}
+
+.add-ingredient {
+  padding: 10px 20px;
+  border: none;
+  background-color: #22543d;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.add-ingredient:hover {
+  background-color: #34805d;
+}
