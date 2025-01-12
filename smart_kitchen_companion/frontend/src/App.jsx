@@ -1,9 +1,10 @@
 import Home from "./pages/Home.jsx";
+import RecipesPage from "./pages/RecipiesPage.jsx";
 
 function App() {
   return (
     <div>
-      <Home />
+      <RecipesPage />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/IngredientList.css";
 
 const IngredientList = () => {
@@ -33,7 +33,8 @@ const IngredientList = () => {
         {ingredients.map((ingredient, index) => (
           <li key={index} className="ingredient-item">
             <span>
-              {ingredient.name} - {ingredient.quantity} - {ingredient.expiry}
+              Name: {ingredient.name} - Qty: {ingredient.quantity} - Exp:{" "}
+              {ingredient.expiry}
             </span>
             <div className="actions">
               <button onClick={() => removeIngredient(index)}>Remove</button>
