@@ -1,7 +1,7 @@
 import cohere
 from read_receipt import read
 
-co = cohere.ClientV2(api_key="PraIz8Li2iWpv3xDsd1UsIfvY0ZkVfcWv7dgmFsl")
+co = cohere.ClientV2(api_key="")
 
 # Obtaining all foods from a receipt
 def filter_receipt(path):
